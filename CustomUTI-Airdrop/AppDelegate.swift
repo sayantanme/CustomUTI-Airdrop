@@ -43,6 +43,52 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
     }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        guard url.pathExtension == "customdata",url.isFileURL else{return false}
+        
+        copyItemsAtDocumentDirectory(url: url)
+        
+        return true
+    }
+    
+    func copyItemsAtDocumentDirectory(url: URL){
+        var copyToUrl = getApplicationDirectory()
+        let fileName = url.lastPathComponent
+        
+        copyToUrl = copyToUrl.appendingPathComponent(fileName, isDirectory: false)
+        
+        if FileManager.default.fileExists(atPath: copyToUrl.path) {
+            var duplicateUrl = copyToUrl
+            copyToUrl = copyToUrl.deletingPathExtension()
+            let filenameWOExtension = copyToUrl.lastPathComponent
+            let fileExtension = url.pathExtension
+            
+            var i = 1
+            while FileManager.default.fileExists(atPath: duplicateUrl.path){
+                copyToUrl = copyToUrl.deletingLastPathComponent()
+                copyToUrl = copyToUrl.appendingPathComponent("\(filenameWOExtension)-\(i)")
+                copyToUrl = copyToUrl.appendingPathExtension(fileExtension)
+                duplicateUrl = copyToUrl
+                i+=1
+            }
+        }
+        do{
+            try FileManager.default.moveItem(at: url, to: copyToUrl)
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "updateTextView"), object: nil)
+        }catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func getApplicationDirectory()->URL{
+        var path = ""
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        if paths.count > 0{
+            path = paths[0]
+        }
+        return URL(fileURLWithPath: path)
+    }
 
     // MARK: - Core Data stack
 

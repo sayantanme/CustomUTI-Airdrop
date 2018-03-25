@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39A07CCE2066E5D60019C06F /* AirDropData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A07CCD2066E5D60019C06F /* AirDropData.swift */; };
 		39BF2CC42066A7A200404B39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BF2CC32066A7A200404B39 /* AppDelegate.swift */; };
 		39BF2CC62066A7A200404B39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BF2CC52066A7A200404B39 /* ViewController.swift */; };
 		39BF2CC92066A7A200404B39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39BF2CC72066A7A200404B39 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 		39BF2CD12066A7A200404B39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39BF2CCF2066A7A200404B39 /* LaunchScreen.storyboard */; };
 		39BF2CDC2066A7A200404B39 /* CustomUTI_AirdropTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BF2CDB2066A7A200404B39 /* CustomUTI_AirdropTests.swift */; };
 		39BF2CE72066A7A200404B39 /* CustomUTI_AirdropUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BF2CE62066A7A200404B39 /* CustomUTI_AirdropUITests.swift */; };
+		39BF2CF72066CE5E00404B39 /* random.customdata in Resources */ = {isa = PBXBuildFile; fileRef = 39BF2CF62066CE5E00404B39 /* random.customdata */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		39A07CCD2066E5D60019C06F /* AirDropData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirDropData.swift; sourceTree = "<group>"; };
 		39BF2CC02066A7A200404B39 /* CustomUTI-Airdrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CustomUTI-Airdrop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39BF2CC32066A7A200404B39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39BF2CC52066A7A200404B39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +52,7 @@
 		39BF2CE22066A7A200404B39 /* CustomUTI-AirdropUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CustomUTI-AirdropUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39BF2CE62066A7A200404B39 /* CustomUTI_AirdropUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUTI_AirdropUITests.swift; sourceTree = "<group>"; };
 		39BF2CE82066A7A300404B39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39BF2CF62066CE5E00404B39 /* random.customdata */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = random.customdata; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				39BF2CCF2066A7A200404B39 /* LaunchScreen.storyboard */,
 				39BF2CD22066A7A200404B39 /* Info.plist */,
 				39BF2CCA2066A7A200404B39 /* CustomUTI_Airdrop.xcdatamodeld */,
+				39BF2CF62066CE5E00404B39 /* random.customdata */,
+				39A07CCD2066E5D60019C06F /* AirDropData.swift */,
 			);
 			path = "CustomUTI-Airdrop";
 			sourceTree = "<group>";
@@ -236,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39BF2CD12066A7A200404B39 /* LaunchScreen.storyboard in Resources */,
+				39BF2CF72066CE5E00404B39 /* random.customdata in Resources */,
 				39BF2CCE2066A7A200404B39 /* Assets.xcassets in Resources */,
 				39BF2CC92066A7A200404B39 /* Main.storyboard in Resources */,
 			);
@@ -265,6 +272,7 @@
 				39BF2CCC2066A7A200404B39 /* CustomUTI_Airdrop.xcdatamodeld in Sources */,
 				39BF2CC62066A7A200404B39 /* ViewController.swift in Sources */,
 				39BF2CC42066A7A200404B39 /* AppDelegate.swift in Sources */,
+				39A07CCE2066E5D60019C06F /* AirDropData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,8 +441,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YT5L554J64;
 				INFOPLIST_FILE = "CustomUTI-Airdrop/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sayantanchakraborty.CustomUTI-Airdrop";
+				PRODUCT_BUNDLE_IDENTIFIER = "sayantanchakraborty.CustomUTI-Airdrop";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -448,8 +457,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YT5L554J64;
 				INFOPLIST_FILE = "CustomUTI-Airdrop/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sayantanchakraborty.CustomUTI-Airdrop";
+				PRODUCT_BUNDLE_IDENTIFIER = "sayantanchakraborty.CustomUTI-Airdrop";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
